@@ -14,7 +14,7 @@ except Exception as e:  # pragma: no cover
 FILE_PATH = Path("<path-to-single-file")
 
 
-def pick_typed_output(reader: object) -> "vtk.vtkDataObject | None":
+def pick_typed_output(reader: object) -> "vtk.vtkDatfaObject | None":
 	"""Return the first concrete VTK output with points from a legacy reader."""
 	getter_names = (
 		"GetPolyDataOutput",
