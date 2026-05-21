@@ -11,6 +11,8 @@ You can use your OpenRouter API key however you like. To make onboarding easier,
 
 The provided configurations use models that are reasonably priced while still being powerful enough for productive hacking.
 
+-> You can check your remaining credits like described [here](https://openrouter.ai/docs/api/reference/limits)
+
 ---
 
 # Important
