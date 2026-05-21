@@ -21,7 +21,6 @@ At Wasteer, our mission is to make waste-to-energy operations more intelligent a
 
 For this challenge, you will work with real industrial data to optimize waste bunker management.
 
-
 # Data
 
 You are given the following data which is available here: <link to data>:
@@ -36,8 +35,8 @@ You are given the following data which is available here: <link to data>:
     - `exit_timestamp`: Time when vehicle exited/was second weighed.
     - `exit_weight`: Tare or final weight on exit (kg, unless otherwise noted).
     - `waste_code`: Material/waste EWC code (e.g., `200301`, `180104`).
-3. **Information per waste type (MISSING)**  
-	Mapping from waste type to calorific value (MJ/kg).
+3. **waste code properties**  
+	Mapping from waste type to calorific value (MJ/kg) and some more info.
 
 **Note:**  
 The dataset does not explicitly include information about material removed from the bunker through incineration. Participants are encouraged to make and justify reasonable assumptions where necessary. Partially observable systems and incomplete operational data are common in real industrial environments and are part of the challenge 😉.
@@ -54,9 +53,10 @@ The first task focuses on understanding how much waste the bunker can still acce
 
 1. **Estimate how much waste can still be added to the bunker**
 	- Calculate how much of each waste type (in kg) can still fit in the bunker until the full threshold is reached.
-    	- The definition of "full" is shown by the red line in Figure X (missing).
+    	- The definition of "full" is shown by the red line in Figure X (will be uploaded in a second ;-) ).
 	- Note that each waste type has different density and compression properties, so the same mass of different waste types will change bunker fullness differently.
     	- Use the LiDAR data along with truck delivery records to perform this estimation.
+  	- Also note that as waste accumulates in the bunker density will be changing over time, if waste is covered with other waste for a certain amount of time the density increases and the volume decreases.
 	- Showcase your approach at different points in time by selecting several LiDAR scans and demonstrating how much of each waste type could still be added at those times.
 
 	**Bonus points:**
@@ -79,12 +79,12 @@ Your task is to estimate the optimal mix of waste required to maintain a stable 
 
 Determine the optimal waste composition:
 
-- Each waste type has an associated calorific value, as shown in Table X (missing).
-- Identify which waste types should be added to the bunker, and in what quantity (kg), to maintain an average calorific value of 10 MJ/kg. Make sure to include your learnings from problem 1 to not exceed bunker capacity.
+- Each waste type has an associated calorific value, as shown in the file `waste_code_properties`.
+- Identify which waste types should be added to the bunker, to maintain an average calorific value of 10 MJ/kg.
 - Showcase your approach using truck delivery record data:
   - Assume that at the start of the data, the average calorific value inside the bunker is 10 MJ/kg.
   - You may define your own reasonable assumption for the initial bunker mass.
-  - Select several truck delivery records from the dataset to showcase your approach. Estimate how individual deliveries change the average calorific value inside the bunker and determine which waste type(s) and quantities would be needed to bring it back toward 10 MJ/kg. Remember to consider your learnings from problem 1 to make sure the bunker does not exeed its limits.
+  - Select several truck delivery records from the dataset to showcase your approach. Estimate how individual deliveries change the average calorific value inside the bunker and determine which waste type(s) and quantities would be needed to bring it back toward 10 MJ/kg. Remember to consider your learnings from problem 1 to make sure the bunker does not exceed its limits.
 
 
 # Expected Output & Submission
@@ -107,7 +107,7 @@ You will be assigned a GPU server (NVIDIA L4 24GB) for the event to be able to t
 4. Execute `start-jupyter` on the server to start your environment
 5. Execute `ssh -i <private_key_file> -N -L 8888:localhost:8888 hacker@<ip_address>` on your local machine to establish ssh tunneling
 6. Connect to Jupyter Lab by opening your browser and go to `http://localhost:8888`
-7. The dataset is also already present at the server. You can unpack the data by running `tar -xzf wasteer-hackathon-data.tar.gz`
+7. A subset of the dataset is already present at the server. You can unpack the data by running `tar -xzf wasteer-hackathon-data.tar.gz`
 8. Start hacking
 
 ## Customizing the Server
