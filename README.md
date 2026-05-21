@@ -27,8 +27,8 @@ You are given the following data which is available [here](https://drive.google.
 
 1. **LiDAR scans of the bunker**  
 	3D surface scans showing the current fill level (visible waste surface) of the bunker. A script for reading and exploring the LiDAR data is available at the file downloads.
-2. **Truck delivery records**  
-	Timestamped list of trucks delivering waste. Each entry includes the waste type and quantity (in kg) delivered into the bunker.
+2. **Truck shipment records**  
+	Timestamped list of trucks shipping waste. Each entry includes the waste type and quantity (in kg) delivered into the bunker.
     - `created_at`: Creation timestamp (UTC, with microseconds).
     - `entry_timestamp`: Time when vehicle entered/was first weighed.
     - `entry_weight`: Gross weight on entry (kg, unless otherwise noted).
@@ -57,7 +57,7 @@ The first task focuses on understanding how much waste the bunker can still acce
 	- Calculate how much of each waste type (in kg) can still fit in the bunker until the full threshold is reached.
     	- The definition of "full" is shown by the red line in Figure X (will be uploaded in a second ;-) ).
 	- Note that each waste type has different density and compression properties, so the same mass of different waste types will change bunker fullness differently.
-    	- Use the LiDAR data along with truck delivery records to perform this estimation.
+    	- Use the LiDAR data along with truck shipment records to perform this estimation.
   	- Also note that as waste accumulates in the bunker density will be changing over time, if waste is covered with other waste for a certain amount of time the density increases and the volume decreases.
 	- Showcase your approach at different points in time by selecting several LiDAR scans and demonstrating how much of each waste type could still be added at those times.
 
@@ -86,7 +86,7 @@ Determine the optimal waste composition:
 - Showcase your approach using truck delivery record data:
   - Assume that at the start of the data, the average calorific value inside the bunker is 10 MJ/kg.
   - You may define your own reasonable assumption for the initial bunker mass.
-  - Select several truck delivery records from the dataset to showcase your approach. Estimate how individual deliveries change the average calorific value inside the bunker and determine which waste type(s) and quantities would be needed to bring it back toward 10 MJ/kg. Remember to consider your learnings from problem 1 to make sure the bunker does not exceed its limits.
+  - Select several truck shipment records from the dataset to showcase your approach. Estimate how individual deliveries change the average calorific value inside the bunker and determine which waste type(s) and quantities would be needed to bring it back toward 10 MJ/kg. Remember to consider your learnings from problem 1 to make sure the bunker does not exceed its limits.
 
 
 # Expected Output & Submission
