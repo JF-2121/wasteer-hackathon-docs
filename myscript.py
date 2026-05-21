@@ -328,3 +328,4 @@ if st.session_state.is_playing:
     else:
         st.session_state.is_playing = False
         st.rerun()
+
