@@ -35,8 +35,10 @@ You are given the following data which is available [here](https://drive.google.
     - `exit_timestamp`: Time when vehicle exited/was second weighed.
     - `exit_weight`: Tare or final weight on exit (kg, unless otherwise noted).
     - `waste_code`: Material/waste EWC code (e.g., `200301`, `180104`).
-3. **waste code properties**  
+3. **Waste code properties**  
 	Mapping from waste type to calorific value (MJ/kg) and some more info.
+4. **Images**
+    Images which can be used either to train or enhance your model or just for you to get a better understanding.
 
 **Note:**  
 The dataset does not explicitly include information about material removed from the bunker through incineration. Participants are encouraged to make and justify reasonable assumptions where necessary. Partially observable systems and incomplete operational data are common in real industrial environments and are part of the challenge 😉.
@@ -89,9 +91,9 @@ Determine the optimal waste composition:
 
 # Expected Output & Submission
 
-- Each team will be given a 10-minute presentation slot to convince the jury of the value and effectiveness of their solution.
+- Each team will be given a 5-minute presentation slot to convince the jury of the value and effectiveness of their solution.
 - Evaluation criteria were provided during the initial presentation and should be considered.
-- Please upload your slides before the deadline at 1:00 PM. This is a strict deadline, so make sure to submit your solution on time.
+- Please submit your slides and solution before the deadline at 1:00 PM. The submission should be done in your private team chat on discord. This is a strict deadline, so make sure to submit your solution on time.
 
 
 # Infrastructure
