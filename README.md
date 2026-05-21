@@ -23,7 +23,7 @@ For this challenge, you will work with real industrial data to optimize waste bu
 
 # Data
 
-You are given the following data which is available here: <link to data>:
+You are given the following data which is available [here](https://drive.google.com/drive/folders/1hLZ3fqWqXGf3ngDBYjjfxKphvNLxyK1y?usp=sharing):
 
 1. **LiDAR scans of the bunker**  
 	3D surface scans showing the current fill level (visible waste surface) of the bunker. A script for reading and exploring the LiDAR data is available at the file downloads.
@@ -100,14 +100,14 @@ You will be assigned a GPU server (NVIDIA L4 24GB) for the event to be able to t
 
 ## Connecting to your Server
 
-1. Write an mail to `mail@maxi-laue.com` with your teamname. You will receive your keypair and IP necessary to connect to the server as response.
+1. You will receive your keypair and IP necessary to connect to the server in your teams private discord team channel.
 2. Connect to your GPU server via SSH `ssh -i <path_to_private_key> hacker@<ip_address>`
    1. Running `chmod 400 /path/to/key` might by necessary
 3. Activate the preconfigured conda environment on the server `conda activate ml`
 4. Execute `start-jupyter` on the server to start your environment
 5. Execute `ssh -i <private_key_file> -N -L 8888:localhost:8888 hacker@<ip_address>` on your local machine to establish ssh tunneling
 6. Connect to Jupyter Lab by opening your browser and go to `http://localhost:8888`
-7. A subset of the dataset is already present at the server. You can unpack the data by running `tar -xzf wasteer-hackathon-data.tar.gz`
+7. A subset of the dataset is already present at the server. Upload more data of the [dataset](https://drive.google.com/drive/folders/1hLZ3fqWqXGf3ngDBYjjfxKphvNLxyK1y?usp=sharing) if needed.
 8. Start hacking
 
 ## Customizing the Server
@@ -119,4 +119,4 @@ You will be assigned a GPU server (NVIDIA L4 24GB) for the event to be able to t
 
 ## Vibe Coding
 
-Each team has access to a OpenRouter API key with 20€ budget, which you will receive during the event. See [vibe-coding/](vibe-coding/) for more info.
+Each team has access to a OpenRouter API key with 20€ budget, which you will receive during the event in your teams private discord teams channel. See [vibe-coding/](vibe-coding/) for more info.
