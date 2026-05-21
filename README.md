@@ -26,7 +26,7 @@ For this challenge, you will work with real industrial data to optimize waste bu
 You are given the following data which is available [here](https://drive.google.com/drive/folders/1hLZ3fqWqXGf3ngDBYjjfxKphvNLxyK1y?usp=sharing):
 
 1. **LiDAR scans of the bunker**  
-	3D surface scans showing the current fill level (visible waste surface) of the bunker. A script for reading and exploring the LiDAR data is available at the file downloads.
+	3D surface scans showing the current fill level (visible waste surface) of the bunker. A script for reading and exploring the LiDAR data is available at the file downloads. Note that the filename is indicating the timestamp of the scan `YYYYMMDDhhmmss`.
 2. **Truck shipment records**  
 	Timestamped list of trucks shipping waste. Each entry includes the waste type and quantity (in kg) delivered into the bunker.
     - `created_at`: Creation timestamp (UTC, with microseconds).
