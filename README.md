@@ -55,7 +55,7 @@ The first task focuses on understanding how much waste the bunker can still acce
 
 1. **Estimate how much waste can still be added to the bunker**
 	- Calculate how much of each waste type (in kg) can still fit in the bunker until the full threshold is reached.
-    	- The definition of "full" is shown by the red line in Figure X (will be uploaded in a second ;-) ).
+    	- Think of your own definition of what "full" really means. There is an indication on the slides shown at the start of the event. See Slideset at slide 34 and 35.
 	- Note that each waste type has different density and compression properties, so the same mass of different waste types will change bunker fullness differently.
     	- Use the LiDAR data along with truck shipment records to perform this estimation.
   	- Also note that as waste accumulates in the bunker density will be changing over time, if waste is covered with other waste for a certain amount of time the density increases and the volume decreases.
